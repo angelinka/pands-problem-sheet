@@ -13,7 +13,7 @@ import sys
 filename = sys.argv[-1]
 
 # print (filename) 
-
+'''
 # checking if file exists and if not asking to check that file name is correct
 if os.path.exists(filename):
     with open (filename, 'r') as f:  #opening the file for reading
@@ -26,5 +26,18 @@ if os.path.exists(filename):
         print (count)
 else:
     print("Can't locate file provided please check if file {} exists in the directory".format(filename))
+'''
 
-  
+# another alternative is to use try/except
+try:  
+    with open (filename, 'r') as f:  #opening the file for reading
+        count = 0
+        for line in f:  #iterating through each line and the each character in the file
+            for letter in line:
+                if letter == 'e':   #if letter "e" is found then adding 1 to count
+                    count +=1
+                #print ('found an e')
+        print (count)
+except FileNotFoundError as e:
+    #print('File ', filename, ' does not exist')
+    print(e)
