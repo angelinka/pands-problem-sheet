@@ -1,20 +1,27 @@
 #This program calculates Body Mass Index (BMI)
 #author: Angelina Belotserkovskaya
 
-# Asks to input height in cm and saves it into variable 
-# which is converted into int
 
-height = int(input('Please enter your height in centimetres: '))
+try:
+    # Ask to input height in cm and save it into variable 
+    # which is converted into int
+    height = int(input('Please enter your height in centimetres: '))
+    # Convert cm to m2
+    heightInM2 = (height**2) / 10000
 
-# Convert cm to m2
-height = (height**2) / 10000
+    # Ask to input weight in kg and save it into variable 
+    # which is converted into int
 
-# Asks to input weight in kg and saves it into variable 
-# which is converted into int
+    weight = int(input('Please enter your weight in kg: '))
 
-weight = int(input('Please enter your weight in kg: '))
+    # Calculating bmi
+    bmi = weight/heightInM2
+    print ('Your BMI is {:.2f}'.format(bmi))
+except:
+    print('Please make sure to enter an integer number')
 
 
-# Calculating bmi
-bmi = weight/height
-print ('Your BMI is {:.2f}'.format(bmi))
+
+
+
+
