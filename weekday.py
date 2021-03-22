@@ -1,7 +1,7 @@
-
+#program outputs whether or not today is a weekday.
+#Author: Angelina Belotserkovskaya
 
 # import Python's datetime module
-
 from datetime import date
 
 # get today's date, reference:
