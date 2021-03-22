@@ -2,7 +2,7 @@
 # calculate the next value by taking the current value and, 
 # if it is even, divide it by two, but if it is odd, 
 # multiply it by three and add one untill current value is one
-#author: Angelina B
+#Author: Angelina Belotserkovskaya
 
 #Asking user to enter positive integer number
 inputNum  = int(input('Please enter a positive integer: '))
