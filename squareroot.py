@@ -2,6 +2,8 @@
 # floating-point number (entered by user) using Newton's method
 #Author: Angelina Belotserkovskaya
 
+# Two solutions offered for this problem in the first one, we asking user to decide on the number of iterations,
+# in the second one precision is defined within the function.
 # Calculation will be based on the following formula:
 # root = 0.5 * (guess + (num/guess))
 # where num - number of which we are trying to find a square root
@@ -19,7 +21,7 @@ def sqrt():
     # In this progam we asking the user to decide on the number of iterations 
             iterations = int(input('Please enter number of iterations you would like to be performed: '))
             break
-        except ValueError:
+        except (ValueError, AssertionError):
             print('Please make sure to enter a positive number')
     # Assume that the square root of input number equals that number
     guess = num
@@ -29,4 +31,27 @@ def sqrt():
     print('The square root of {} is approx:'.format(num))    
     print(round(guess,2))
 
-sqrt()
+
+#Alternative solution with defined precision
+def squareRoot():
+    while True:
+        try:
+            num = float(input('Please enter a positive number to calculate square root: '))
+            assert num > 0
+            break
+        except (ValueError, AssertionError):
+            print('Please make sure to enter a positive number')
+
+    root = num 
+    #Here we difine how precise we want the calculation to be   
+    precision = 0.00001
+
+    while abs(num - root*root) > precision:
+        root = 0.5 * (root + num/root)
+    
+    print('The square root of {} is approx:'.format(num))
+    print(round(root,2))
+
+#sqrt()
+
+squareRoot()
