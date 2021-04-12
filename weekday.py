@@ -17,7 +17,7 @@ dayOfWeek = todayDate.weekday()
 
 #if dayOfWeek equals 5 or 6 it means it Sat or Sun - weekend,
 #else it's a week day
-if dayOfWeek == 5 or dayOfWeek == 6:
+if dayOfWeek >= 5:
     print ('It is the weekend, yay!')
 else:
     print('Yes, unfortunately today is a weekday.')
