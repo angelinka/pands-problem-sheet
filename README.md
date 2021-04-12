@@ -43,4 +43,6 @@ Reference to parcing arguments using sys
  https://realpython.com/python-command-line-arguments/#a-few-methods-for-parsing-python-command-line-arguments
 
 7. plottask.py - this program displays a plot of the functions f(x)=x, g(x)=x**2 and h(x)=x**3 in the range [0, 4] on the one set of axes.
-Reference: mainly w3wchools Python Matplotlib has been used
+Reference: w3wchools Python Matplotlib has been used:
+https://www.w3schools.com/python/matplotlib_markers.asp
+https://www.w3schools.com/python/matplotlib_line.asp
